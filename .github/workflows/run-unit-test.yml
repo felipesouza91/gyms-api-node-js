@@ -18,9 +18,9 @@ jobs:
       - name: create env file
         run: |
             touch .env
-            echo PORT=3333 NODE_ENV=development 
-            APP_SALT=6 |
-            DATABASE_URL="postgresql://docker:docker@localhost:5432/data-base?schema=public" |
+            echo PORT=3333 NODE_ENV=development \
+            APP_SALT=6 \
+            DATABASE_URL="postgresql://docker:docker@localhost:5432/data-base?schema=public" \
             JWT_SECRET=secret >> .env 
       - run: npm ci
       
