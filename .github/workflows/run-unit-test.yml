@@ -13,7 +13,7 @@ jobs:
       - name: create env file
         run: |
             touch .env
-            echo -e "PORT=3333 NODE_ENV=development\nAPP_SALT=6\nDATABASE_URL="postgresql://docker:docker@localhost:5432/data-base?schema=public"\nJWT_SECRET=secret" >> .env 
+            echo -e "PORT=3333\nNODE_ENV=development\nAPP_SALT=6\nDATABASE_URL="postgresql://docker:docker@localhost:5432/data-base?schema=public"\nJWT_SECRET=secret" >> .env 
             
       - name: test
         run: ls -la
