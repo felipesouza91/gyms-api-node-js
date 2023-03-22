@@ -7,7 +7,7 @@ const envSchema = zod.object({
     .default('development'),
   PORT: zod.coerce.number().default(3333),
   DATABASE_URL: zod.string(),
-  APP_SALT: zod.coerce.number(),
+  APP_SALT: zod.coerce.number().default(6),
   JWT_SECRET: zod.string(),
 })
 
