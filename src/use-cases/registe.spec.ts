@@ -34,6 +34,7 @@ describe('Register Use Case', async () => {
         name: '',
         created_at: new Date(),
         password_hash: '',
+        role: 'ADMIN',
       }),
     )
     const inputData = {
