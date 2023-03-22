@@ -1,0 +1,11 @@
+version: 'v3'
+
+services:
+  database:
+    image: bitnami/postgresql:14
+    environment:
+      - POSTGRESQL_DATABASE=data-base
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+    ports:
+      - 5432:5432
