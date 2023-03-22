@@ -13,14 +13,8 @@ jobs:
       - name: create env file
         run: |
             touch .env
-            echo -e "PORT=3333\nNODE_ENV=development\nAPP_SALT=6\nDATABASE_URL="postgresql://docker:docker@localhost:5432/data-base?schema=public"\nJWT_SECRET=secret" >> .env 
-            
-      - name: test
-        run: ls -la
-      
-      - name: cat
-        run: cat .env
-      
+            echo -e "PORT=3333\nNODE_ENV=development\nAPP_SALT=6\nDATABASE_URL="postgresql://docker:docker@localhost:5432/data-base?schema=public"\nJWT_SECRET=secret" >> .env
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
