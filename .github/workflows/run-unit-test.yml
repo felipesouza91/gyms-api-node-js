@@ -17,8 +17,12 @@ jobs:
             APP_SALT=6 \
             DATABASE_URL="postgresql://docker:docker@localhost:5432/data-base?schema=public" \
             JWT_SECRET=secret >> .env 
+            
       - name: test
         run: ls -la
+      
+      - name: cat
+        run: cat .env
       
       - uses: actions/setup-node@v3
         with:
