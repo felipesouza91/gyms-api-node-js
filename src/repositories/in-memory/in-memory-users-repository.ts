@@ -1,5 +1,5 @@
 import { UserRepository } from '@/repositories/users-repository'
-import { Prisma, User } from '@prisma/client'
+import { Prisma, Role, User } from '@prisma/client'
 import { randomUUID } from 'crypto'
 
 export class InMemoryUserRepository implements UserRepository {
@@ -16,6 +16,7 @@ export class InMemoryUserRepository implements UserRepository {
       password_hash,
       created_at: new Date(),
       email,
+      role: Role.ADMIN,
     }
     return Promise.resolve(savedUser)
   }
