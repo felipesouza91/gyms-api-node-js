@@ -16,7 +16,7 @@ jobs:
           POSTGRESQL_DATABASE: data-base
           POSTGRESQL_USERNAME: docker
           POSTGRESQL_PASSWORD: docker
-
+        
 
     steps:
       - uses: actions/checkout@v3
@@ -33,5 +33,5 @@ jobs:
           PORT: 3333
           NODE_ENV: test
           APP_SALT: 6
-          DATABASE_URL: "postgresql://docker:docker@database:5432/data-base?schema=public"
+          DATABASE_URL: "postgresql://docker:docker@localhost:5432/data-base?schema=public"
           JWT_SECRET: secret
